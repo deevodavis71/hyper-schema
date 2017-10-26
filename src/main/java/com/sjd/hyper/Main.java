@@ -1,18 +1,13 @@
 package com.sjd.hyper;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
 import com.fasterxml.jackson.module.jsonSchema.customProperties.HyperSchemaFactoryWrapper;
-import com.fasterxml.jackson.module.jsonSchema.factories.SchemaFactoryWrapper;
 import com.fasterxml.jackson.module.jsonSchema.factories.VisitorContext;
 import com.sjd.hyper.dto.CustomerOrderDTO;
 import com.sjd.hyper.dto.LogicalConnectionDTO;
 import com.sjd.hyper.dto.TopologyDTO;
-import com.sjd.hyper.dto.support.WrappedCollection;
 
 public class Main {
 
@@ -89,7 +84,14 @@ public class Main {
         // Get the schemas
 
         JsonSchema o = getHyperSchema(CustomerOrderDTO.class);
+
+        System.out.println();
+
         JsonSchema t = getHyperSchema(TopologyDTO.class);
+
+        System.out.println();
+
+        JsonSchema lc = getHyperSchema(LogicalConnectionDTO.class);
 
 
 

@@ -4,6 +4,6 @@ import com.fasterxml.jackson.module.jsonSchema.annotation.JsonHyperSchema;
 import lombok.Data;
 
 @Data
-@JsonHyperSchema(pathStart = "http://logicalConn")
+@JsonHyperSchema(pathStart = "http://getschema?path=LogicalConnectionDTO")
 public class LogicalConnectionDTO {
 }
