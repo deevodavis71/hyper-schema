@@ -9,9 +9,9 @@ import com.sjd.hyper.dto.support.WrappedCollection;
 import lombok.Data;
 
 @Data
-@JsonHyperSchema(pathStart = "http://topology", links = {
-        @Link(href="/logicalConnections", rel="logicalConnections", targetSchema = LogicalConnectionDTO.class),
-        @Link(href="/links", rel="links", targetSchema = LinkDTO.class)
+@JsonHyperSchema(pathStart = "http://getschema?path=TopologyDTO", links = {
+        @Link(href="/LogicalConnectionDTO", rel="logicalConnections", targetSchema = LogicalConnectionDTO.class),
+        @Link(href="/LinkDTO", rel="links", targetSchema = LinkDTO.class)
 })
 public class TopologyDTO {
 
